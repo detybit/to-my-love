@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for Nelly</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+
+        #surprise-message {
+            display: none;
+            text-align: center;
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff0066, #ffcc33, #66ff66, #0099ff);
+            background-size: 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: colors 3s ease infinite;
+        }
+
+        @keyframes colors {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        #surprise-btn {
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            color: white;
+            background-color: #ff0066;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #surprise-btn:hover {
+            background-color: #ff3399;
+        }
+
+    </style>
+</head>
+<body>
+
+    <button id="surprise-btn" onclick="showMessage()">Click to open surprise</button>
+
+    <div id="surprise-message">I love you Nelly</div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("surprise-message").style.display = "block";
+            document.getElementById("surprise-btn").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
